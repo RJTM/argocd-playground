@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-app
+  name: production
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: test-app
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: dev/test-app
+    path: production
     repoURL: https://github.com/RJTM/argocd-playground.git
     targetRevision: HEAD
   syncPolicy:
