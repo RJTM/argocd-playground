@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: test-app
+    path: dev/test-app
     repoURL: https://github.com/RJTM/argocd-playground.git
     targetRevision: HEAD
   syncPolicy:
